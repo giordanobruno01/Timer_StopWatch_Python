@@ -1,5 +1,6 @@
 import time as time2
 # from playsound import playsound
+
 class clock:
 
     def timer(self, timeStr):
@@ -37,8 +38,39 @@ class clock:
             time2.sleep(1)
 
         print("\r00:00:00")
-    def stopWatch():
-        pass
+        # playsound("/content/digital-alarm-clock-151920.mp3")
+
+    def stopWatch(self):
+        sec = 0
+        min = 0
+        hour =0
+        while(True):
+            
+            if(sec==60):
+                min = min+1
+                sec = 0
+            if(min==60):
+                hour +=1
+                min = 0
+
+            if(hour<10):
+                print("\r0"+str(hour),end="")
+            else:
+                print("\r"+str(hour),end="")
+
+            if(min<10):
+                print(":0"+str(min),end="")
+            else:
+                print(":"+str(min),end="")
+
+            if(sec<10):
+                print(":0"+str(sec),end="")
+            else:
+                print(":"+str(sec),end="")
+            # print("\r",hour," hour ", min, " min " ,sec," sec", end="")
+            sec+=1
+            
+            time2.sleep(1)
 
 obj = clock()
 
