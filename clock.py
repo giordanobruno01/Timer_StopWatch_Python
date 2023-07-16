@@ -1,3 +1,4 @@
+import time
 class clock:
 
     def timer(self, timeStr):
@@ -18,10 +19,7 @@ class clock:
 
             time[2] -=1
         print(time[0],":",time[1],":",time[0],"\r")
-
-            
-            
-      
+         
 
     def stopWatch():
         pass
