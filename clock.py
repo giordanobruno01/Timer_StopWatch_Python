@@ -1,4 +1,5 @@
 import time as time2
+from IPython.display import Audio,display
 # from playsound import playsound
 
 class clock:
@@ -33,11 +34,13 @@ class clock:
             if(time[2]==0 and time[1]!=0):
                 time[1] = time[1] - 1
                 time[2] = 60
-# 0:1:10
+
             time[2] = time[2]-1
             time2.sleep(1)
 
         print("\r00:00:00")
+        sound_file="/Users/giordanobruno/Desktop/GitHub/Timer_StopWatch_Python/digital-alarm-clock-151920.mp3"
+        display(Audio(sound_file, autoplay=True))
         # playsound("/content/digital-alarm-clock-151920.mp3")
 
     def stopWatch(self):
